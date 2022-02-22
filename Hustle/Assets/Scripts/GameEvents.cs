@@ -17,6 +17,7 @@ public class GameEvents : MonoBehaviour
     public event Action<int> OnSpeedStateChange;
 
     public void SpeedStateChange(int direction){
+        Debug.Log("SpeedStateChange");
         if(OnSpeedStateChange != null){
             OnSpeedStateChange(direction);
         }
