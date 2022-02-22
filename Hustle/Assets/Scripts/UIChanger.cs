@@ -17,23 +17,25 @@ public class UIChanger : MonoBehaviour
     private void UpdateUI(int direction){
         Debug.Log("Update UI");
         if(direction > 0){
-            if(_arrowIndex >= 0 && _arrowIndex < 3){
+            if(_arrowIndex >= 0 && _arrowIndex < 4){
                 rightArrows[_arrowIndex].SetActive(true);
+                _arrowIndex += direction;
             }
-            else if(_arrowIndex <= 0 && _arrowIndex > -3){
+            else if(_arrowIndex <= 0 && _arrowIndex > -4){
                 leftArrows[Mathf.Abs(_arrowIndex)].SetActive(false);
+                _arrowIndex += direction;
             }
         }
 
         else{
-            if(_arrowIndex <= 0 && _arrowIndex > -3){
+            if(_arrowIndex <= 0 && _arrowIndex > -4){
                 leftArrows[Mathf.Abs(_arrowIndex)].SetActive(true);
+                _arrowIndex += direction;
             }
-            else if(_arrowIndex >= 0 && _arrowIndex < 3){
+            else if(_arrowIndex >= 0 && _arrowIndex < 4){
                 rightArrows[_arrowIndex].SetActive(false);
+                _arrowIndex += direction;
             }
         }
-
-        _arrowIndex += direction;
     }
 }
