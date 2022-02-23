@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-
+    /*
     private void Update(){
 
         if(Input.GetKeyUp(KeyCode.RightArrow)){
@@ -20,5 +20,6 @@ public class PlayerInput : MonoBehaviour
         }
 
     }
+    */
 
 }

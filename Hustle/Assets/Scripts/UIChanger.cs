@@ -14,27 +14,39 @@ public class UIChanger : MonoBehaviour
         GameEvents.current.OnSpeedStateChange += UpdateUI;
     }
 
+    private void Update(){
+
+        if(Input.GetKeyUp(KeyCode.RightArrow)){
+            UpdateUI(1);
+        }
+
+        if(Input.GetKeyUp(KeyCode.LeftArrow)){
+            UpdateUI(-1);
+        }
+
+    }
+
     private void UpdateUI(int direction){
         Debug.Log("Update UI");
         if(direction > 0){
-            if(_arrowIndex >= 0 && _arrowIndex < 4){
+            if(_arrowIndex >= 0 && _arrowIndex < 3){
                 rightArrows[_arrowIndex].SetActive(true);
                 _arrowIndex += direction;
             }
             else if(_arrowIndex <= 0 && _arrowIndex > -4){
-                leftArrows[Mathf.Abs(_arrowIndex)].SetActive(false);
                 _arrowIndex += direction;
+                leftArrows[Mathf.Abs(_arrowIndex)].SetActive(false);
             }
         }
 
         else{
-            if(_arrowIndex <= 0 && _arrowIndex > -4){
+            if(_arrowIndex <= 0 && _arrowIndex > -3){
                 leftArrows[Mathf.Abs(_arrowIndex)].SetActive(true);
                 _arrowIndex += direction;
             }
             else if(_arrowIndex >= 0 && _arrowIndex < 4){
-                rightArrows[_arrowIndex].SetActive(false);
                 _arrowIndex += direction;
+                rightArrows[_arrowIndex].SetActive(false);
             }
         }
     }
