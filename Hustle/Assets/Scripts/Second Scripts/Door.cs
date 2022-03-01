@@ -15,6 +15,10 @@ public class Door : MonoBehaviour
    private void OpenDoor(int triggerID){
        if(triggerID == doorID){
            Debug.Log("Open Door");
-   }
-       }
+        }
+    }
+
+    private void OnDisable(){
+        EventManager.current.OpenDoorEvent -= OpenDoor;
+    }
 }
