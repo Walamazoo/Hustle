@@ -11,9 +11,8 @@ public class GameEvents : MonoBehaviour
 
     public event Action<int> OnSpeedStateChange;
 
-    private void Awake()
-    {
-         if (current == null){
+    private void Awake(){
+        if (current == null){
             current = this;
         }
         else{
@@ -24,9 +23,7 @@ public class GameEvents : MonoBehaviour
     }
 
     public void SpeedStateChange(int direction){
-        //Debug.Log("SpeedStateChange");
-        if(OnSpeedStateChange != null){
-            OnSpeedStateChange(direction);
-        }
+        Debug.Log("SpeedStateChange");
+        OnSpeedStateChange?.Invoke(direction);
     }
 }

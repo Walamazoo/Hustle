@@ -296,7 +296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 153924286}
-  - component: {fileID: 153924287}
+  - component: {fileID: 153924285}
   m_Layer: 0
   m_Name: UI Changer
   m_TagString: Untagged
@@ -304,6 +304,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &153924285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153924284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acff9bf2c0a678d4291db6205e95bcae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightArrows:
+  - {fileID: 62068182}
+  - {fileID: 120275750}
+  - {fileID: 1037266613}
+  leftArrows:
+  - {fileID: 687463071}
+  - {fileID: 244971842}
+  - {fileID: 1840389134}
 --- !u!4 &153924286
 Transform:
   m_ObjectHideFlags: 0
@@ -330,27 +350,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &153924287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153924284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e0a1e1ed989a1745a4714e96b67454f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorID: 0
-  rightArrows:
-  - {fileID: 62068182}
-  - {fileID: 120275750}
-  - {fileID: 1037266613}
-  leftArrows:
-  - {fileID: 687463071}
-  - {fileID: 244971842}
-  - {fileID: 1840389134}
 --- !u!1 &195941060
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,7 +937,7 @@ GameObject:
   - component: {fileID: 1408894458}
   - component: {fileID: 1408894460}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1018,10 +1017,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1408894457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad47193393a7e32409a38492f0ad3589, type: 3}
+  m_Script: {fileID: 11500000, guid: 4de7b0c6f35fac24883013f4b93321ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerID: 0
 --- !u!1 &1535236621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,7 +1128,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1713682089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdc7c126a5847ae43b8a86d14e0040af, type: 3}
+  m_Script: {fileID: 11500000, guid: d8a6b558d8695b34fbfda035c7f5ac4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1713682091
@@ -1322,7 +1320,7 @@ GameObject:
   - component: {fileID: 2065193118}
   - component: {fileID: 2065193119}
   m_Layer: 0
-  m_Name: Left Arrow 3 (1)
+  m_Name: Left Arrow Outline 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

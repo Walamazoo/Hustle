@@ -10,12 +10,14 @@ public class UIChanger : MonoBehaviour
     [SerializeField] GameObject[] leftArrows;
     private int _arrowIndex = 0;
 
-    private void start(){
+    // Start is called before the first frame update
+    void Start()
+    {
         GameEvents.current.OnSpeedStateChange += UpdateUI;
     }
 
     private void UpdateUI(int direction){
-        //Debug.Log("Update UI");
+        Debug.Log("Update UI");
         if(direction > 0){
             if(_arrowIndex >= 0 && _arrowIndex < 3){
                 rightArrows[_arrowIndex].SetActive(true);
@@ -39,17 +41,4 @@ public class UIChanger : MonoBehaviour
         }
     }
 
-    /*
-    private void Update(){
-
-        if(Input.GetKeyUp(KeyCode.RightArrow)){
-            UpdateUI(1);
-        }
-
-        if(Input.GetKeyUp(KeyCode.LeftArrow)){
-            UpdateUI(-1);
-        }
-
-    }
-    */
 }

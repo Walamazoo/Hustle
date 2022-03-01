@@ -7,17 +7,14 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour
 {
     private void Update(){
-
         if(Input.GetKeyUp(KeyCode.RightArrow)){
-            //Debug.Log("Right");
+            Debug.Log("Right");
             GameEvents.current.SpeedStateChange(1);
         }
 
         if(Input.GetKeyUp(KeyCode.LeftArrow)){
-            //Debug.Log("Left");
+            Debug.Log("Left");
             GameEvents.current.SpeedStateChange(-1);
         }
-
-    }
-
+    } 
 }
