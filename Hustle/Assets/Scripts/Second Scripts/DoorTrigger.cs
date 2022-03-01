@@ -11,6 +11,16 @@ public class DoorTrigger : MonoBehaviour
         if (Input.GetMouseButtonDown(0)){
            EventManager.current.StartDoorEvent(triggerID);
         }
+
+        if(Input.GetKeyUp(KeyCode.RightArrow)){
+            Debug.Log("Right");
+            EventManager.current.SpeedStateChange(1);
+        }
+
+        if(Input.GetKeyUp(KeyCode.LeftArrow)){
+            Debug.Log("Left");
+            EventManager.current.SpeedStateChange(-1);
+        }
     } 
 
 }

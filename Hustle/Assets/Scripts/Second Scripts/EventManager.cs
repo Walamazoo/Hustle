@@ -12,6 +12,8 @@ public class EventManager : MonoBehaviour
     public event Action ExampleEvent;
     public event Action<int> OpenDoorEvent;
 
+    public event Action<int> OnSpeedStateChange;
+
     private void Awake(){
         if (current == null){
             current = this;
@@ -37,5 +39,10 @@ public class EventManager : MonoBehaviour
 
     public void StartDoorEvent(int id){
         OpenDoorEvent?.Invoke(id);
+    }
+
+    public void SpeedStateChange(int direction){
+        Debug.Log("SpeedStateChange");
+        OnSpeedStateChange?.Invoke(direction);
     }
 }

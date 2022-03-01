@@ -14,20 +14,8 @@ public class UIChanger : MonoBehaviour
         GameEvents.current.OnSpeedStateChange += UpdateUI;
     }
 
-    private void Update(){
-
-        if(Input.GetKeyUp(KeyCode.RightArrow)){
-            UpdateUI(1);
-        }
-
-        if(Input.GetKeyUp(KeyCode.LeftArrow)){
-            UpdateUI(-1);
-        }
-
-    }
-
     private void UpdateUI(int direction){
-        Debug.Log("Update UI");
+        //Debug.Log("Update UI");
         if(direction > 0){
             if(_arrowIndex >= 0 && _arrowIndex < 3){
                 rightArrows[_arrowIndex].SetActive(true);
@@ -50,4 +38,18 @@ public class UIChanger : MonoBehaviour
             }
         }
     }
+
+    /*
+    private void Update(){
+
+        if(Input.GetKeyUp(KeyCode.RightArrow)){
+            UpdateUI(1);
+        }
+
+        if(Input.GetKeyUp(KeyCode.LeftArrow)){
+            UpdateUI(-1);
+        }
+
+    }
+    */
 }

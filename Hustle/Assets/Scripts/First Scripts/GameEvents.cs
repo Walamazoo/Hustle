@@ -9,15 +9,22 @@ public class GameEvents : MonoBehaviour
 {
     public static GameEvents current;
 
-    private void Awake()
-    {
-        current = this;
-    }
-
     public event Action<int> OnSpeedStateChange;
 
+    private void Awake()
+    {
+         if (current == null){
+            current = this;
+        }
+        else{
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
+    }
+
     public void SpeedStateChange(int direction){
-        Debug.Log("SpeedStateChange");
+        //Debug.Log("SpeedStateChange");
         if(OnSpeedStateChange != null){
             OnSpeedStateChange(direction);
         }
