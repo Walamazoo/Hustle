@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Inputs modified to recognize WASD and arrow keys
+
 public class PlayerController : Player
 {
     Vector2 move;
@@ -18,13 +20,21 @@ public class PlayerController : Player
 
     protected override void ComputeVelocity(){
 
-        if(Input.GetKeyDown("right")){
+        if(Input.GetKeyDown("right") || Input.GetKeyDown(KeyCode.D)){
+
+            //New code using Event System
+            GameEvents.current.SpeedStateChange(1);
+
             speedState += 1;
             if(speedState > 3){
                 speedState = 3;
             }
         }
-        if(Input.GetKeyDown("left")){
+        if(Input.GetKeyDown("left") || Input.GetKeyDown(KeyCode.A)){
+
+            //New code using Event System
+            GameEvents.current.SpeedStateChange(-1);
+
             speedState -= 1;
             if(speedState < -3){
                 speedState = -3;
@@ -33,10 +43,10 @@ public class PlayerController : Player
 
         maxSpeed(speedState);
 
-        if(Input.GetKeyDown("up") && grounded){
+        if((Input.GetKeyDown("up") || Input.GetKeyDown(KeyCode.W)) && grounded){
             velocity.y = jumpTakeOffSpeed + Mathf.Abs(move.x/2.5f);
         }
-        else if(Input.GetKeyUp("up")){
+        else if(Input.GetKeyUp("up") || Input.GetKeyDown(KeyCode.W)){
             if(velocity.y > 0f){
                 velocity.y = velocity.y * 0.5f;
             }

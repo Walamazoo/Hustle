@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Inputs modified to recognize WASD and arrow keys
+
 public class Slide : MonoBehaviour
 {
     public BoxCollider2D bc2d;
@@ -29,7 +31,7 @@ public class Slide : MonoBehaviour
     {
         if (!is_sliding)
         {
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown("down"))
             {
                 //print("pressed s");
                 bc2d.size = new Vector2(bc_h, bc_h / 2);
