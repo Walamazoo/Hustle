@@ -7,7 +7,9 @@ public class AnimStateController: MonoBehaviour
 {
     Animator animator;
 
-    public float maxSpeed = 3f; // max speed in meters per second. Currently, we're using this for standalone flexability of the animation rig (fully decoupled).
+
+    Player player;
+    readonly static float maxSpeed = 10f;     // the speed at which we're at our "fastest" animation. Hardcoded for now, this is the highest x velocity the Player object reaches 
     public float maxAngle = 20;
 
     int level = 0;
@@ -18,6 +20,7 @@ public class AnimStateController: MonoBehaviour
     {
         animator = GetComponentInChildren<Animator>();
         GameEvents.current.OnSpeedStateChange += Current_OnSpeedStateChange;
+        player = GetComponentInParent<Player>();
     }
 
 
@@ -39,9 +42,8 @@ public class AnimStateController: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // TEMPORARY!! Need changes from event system before I can make speed changes gradual.
-        // Have to be able to access our speed, probably.
-        updateBody(3 / Mathf.Abs(level), level);
+
+        updateBody(Mathf.Abs(player.velocity.x)/maxSpeed, level); // pass in physical values for animation
     }
 
 
