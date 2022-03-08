@@ -10,7 +10,15 @@ public class AnimStateController: MonoBehaviour
 
     Player player;
     readonly static float maxSpeed = 10f;     // the speed at which we're at our "fastest" animation. Hardcoded for now, this is the highest x velocity the Player object reaches 
-    public float maxAngle = 20;
+
+
+    /// <summary>
+    /// The maximum and minimum speed modifiers for animations. Animations will get faster or slower based on actual speed, but these values clamp
+    /// that to ensure we're not, like, sliding in slow motion or anything.
+    /// </summary>
+    static float maxAnimSpeedMod = 3f;
+    static float minAnimSpeedMod = 0.75f;
+
 
     int level = 0;
 
@@ -43,6 +51,14 @@ public class AnimStateController: MonoBehaviour
     void Update()
     {
 
+        if (Input.GetKeyDown(KeyCode.S))
+            animator.SetTrigger("Slide");
+
+        if (Input.GetKey(KeyCode.S))
+            animator.SetBool("SlideHeld", true);
+        else animator.SetBool("SlideHeld", false);
+
+
         updateBody(Mathf.Abs(player.velocity.x)/maxSpeed, level); // pass in physical values for animation
     }
 
@@ -52,13 +68,21 @@ public class AnimStateController: MonoBehaviour
     /// </summary>
     /// <param name="scaledSpeed"> Speed as represented by a decimal value between 0 and 1, with 0 being stopped and 1 being full speed. Used for animation blending. </param>
     /// <param name="targetLevel"> The current target level (of speed).</param>
-    public void updateBody(float scaledSpeed, int targetLevel)
+    void updateBody(float scaledSpeed, int targetLevel)
     {
         //transform.rotation = Quaternion.Euler(0, 0, Mathf.LerpAngle(0, (currentSpeed < 0 ? 1 : -1) * maxAngle, Mathf.Abs(currentSpeed) / 3));   //LEANING FORWARD W/ SPEED
 
         if (targetLevel < 0) transform.rotation = Quaternion.Euler(0, 180, 0);
         else if(targetLevel != 0) transform.rotation = Quaternion.Euler(0, 0, 0);
         animator.SetFloat("Speed", scaledSpeed);
+        animator.SetFloat("AnimSpeedMod", getAnimSpeedMod(scaledSpeed));
+    }
+
+
+    float getAnimSpeedMod(float scaledSpeed)
+    {
+        // more code will go here later, probably involving an animation curve. For now, we're doing a simple clamp.
+        return Mathf.Clamp(scaledSpeed, minAnimSpeedMod, maxAnimSpeedMod); 
     }
 
     private void FixedUpdate()

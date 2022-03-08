@@ -62,7 +62,7 @@ public class BPlayerController : MonoBehaviour
         if (level > 3) level = 3;
         if (level < -3) level = -3;
 
-        body.updateBody(scaledSpeed, level);
+
         zoomer.updateCamera(scaledSpeed);
         indicatorGroup.updateIndicators(scaledSpeed, level);
     }
