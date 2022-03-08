@@ -205,6 +205,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &187241358 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8534386228017251482, guid: f8c90011c9efa3d4e8cad2f078ebfd75, type: 3}
+  m_PrefabInstance: {fileID: 1248895354}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &187241359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187241358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a5fc9cb91220a448bb04bf8690a9728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bc2d: {fileID: 1155714401}
+  wait_time: 2
 --- !u!1 &305493706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8534386229078387184, guid: f8c90011c9efa3d4e8cad2f078ebfd75, type: 3}
@@ -230,21 +249,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &305493708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 305493706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a5fc9cb91220a448bb04bf8690a9728, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bc2d: {fileID: 1155714401}
-  wait_time: 0
+  m_Constraints: 4
 --- !u!114 &305493709
 MonoBehaviour:
   m_ObjectHideFlags: 0
