@@ -44,7 +44,7 @@ public class PlayerController : Player
         maxSpeed(speedState);
 
         if((Input.GetKeyDown("up") || Input.GetKeyDown(KeyCode.W)) && grounded){
-            velocity.y = jumpTakeOffSpeed + Mathf.Abs(move.x/2.5f);
+            velocity.y = jumpTakeOffSpeed + Mathf.Abs(move.x/1.75f);
         }
         else if(Input.GetKeyUp("up") || Input.GetKeyDown(KeyCode.W)){
             if(velocity.y > 0f){
