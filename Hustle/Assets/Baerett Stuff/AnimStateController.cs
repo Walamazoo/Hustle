@@ -51,10 +51,10 @@ public class AnimStateController: MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown("down"))
             animator.SetTrigger("Slide");
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || Input.GetKeyDown("down"))
             animator.SetBool("SlideHeld", true);
         else animator.SetBool("SlideHeld", false);
 
