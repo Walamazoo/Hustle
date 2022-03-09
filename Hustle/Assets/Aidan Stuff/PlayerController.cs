@@ -56,6 +56,9 @@ public class PlayerController : Player
     }
 
     void maxSpeed(int state){
+        if(velocity.x == 0){
+            move.x = 0;
+        }
         if(ticked == true){
             tickTimer -= Time.deltaTime;
             if(tickTimer <= 0.0f){
