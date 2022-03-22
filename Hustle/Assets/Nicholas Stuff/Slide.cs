@@ -8,40 +8,63 @@ public class Slide : MonoBehaviour
 {
     public BoxCollider2D bc2d;
     float bc_h;
-    public float wait_time;
-    private bool is_sliding = false;
-
-
+    bool is_sliding = false;
+    bool can_stop_sliding = true;
+    int layerMask = 1 << 6;
+    
     // Start is called before the first frame update
     void Start()
     {
         bc_h = bc2d.size.x; 
     }
 
-    IEnumerator wait_Corotine()
+    void CanStop()
     {
-        yield return new WaitForSeconds(wait_time);
-        bc2d.size = new Vector2(bc_h, bc_h);
-        bc2d.offset = new Vector2(0, 0);
-        is_sliding = false;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.up), 2f, layerMask);
+        if (hit)
+        {
+            can_stop_sliding = false;
+        }
+        else
+        {
+            
+            can_stop_sliding = true;
+        }
     }
+
 
     // Update is called once per frame
     void Update()
     {
-        if (!is_sliding)
+        CanStop();
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown("down")|| is_sliding)
         {
-            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown("down"))
+            print("pressed s");
+            bc2d.size = new Vector2(bc_h, bc_h / 2);
+            bc2d.offset = new Vector2(0, -bc_h / 4);
+            //print(bc2d.size.y); 
+            is_sliding = true;
+            can_stop_sliding = false;
+
+
+        }
+        if(Input.GetKeyUp(KeyCode.S)||Input.GetKeyUp("up")||can_stop_sliding)
+        {
+            is_sliding = false;
+            if (can_stop_sliding)
             {
-                //print("pressed s");
-                bc2d.size = new Vector2(bc_h, bc_h / 2);
-                bc2d.offset = new Vector2(0, -bc_h / 4);
-                //print(bc2d.size.y); 
-                is_sliding = true;
-                StartCoroutine(wait_Corotine());
+                //Debug.LogError("should stop");
+                is_sliding = false;
+                bc2d.size = new Vector2(bc_h, bc_h);
+                bc2d.offset = new Vector2(0, 0);
             }
+            
 
         }
         
+        
+
     }
+        
+    
 }

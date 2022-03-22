@@ -12,6 +12,10 @@ public class PlayerController : Player
     bool ticked;
     float tickTimer = 0.1f;
     // Start is called before the first frame update
+
+    //Wall jump stuff
+    int saved_speedState = 0;
+    float saved_velocity;
     void Start()
     {
         move = Vector2.zero;
@@ -49,6 +53,37 @@ public class PlayerController : Player
         else if(Input.GetKeyUp("up") || Input.GetKeyDown(KeyCode.W)){
             if(velocity.y > 0f){
                 velocity.y = velocity.y * 0.5f;
+            }
+        }
+        //Wall jump stuff
+
+        if(velocity.x == 0 && !grounded)
+        {
+            print(speedState);
+            if (Input.GetKeyDown("up") || Input.GetKeyDown(KeyCode.W)){
+                int i = 2 *speedState;
+                if (speedState > 0)
+                {
+                    while(i > 0)
+                    {
+                        GameEvents.current.SpeedStateChange(-1);
+                        speedState -= 1;
+                        i--;
+                    }
+                }
+                else
+                {
+                    while (i < 0)
+                    {
+                        GameEvents.current.SpeedStateChange(1);
+                        speedState += 1;
+                        i++;
+                    }
+                }
+                velocity.x = speedState *5f;
+                move.x = speedState * 5f;
+                velocity.y = jumpTakeOffSpeed + Mathf.Abs(move.x / 1.75f);
+                print(speedState);
             }
         }
 
