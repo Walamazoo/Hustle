@@ -6,11 +6,11 @@ using UnityEngine.U2D;
 public class AnimStateController: MonoBehaviour
 {
     Animator animator;
-
-
+    CameraZoomer zoomer;
+    Woosher woosher;
     Player player;
-    readonly static float maxSpeed = 10f;     // the speed at which we're at our "fastest" animation. Hardcoded for now, this is the highest x velocity the Player object reaches 
-
+    readonly static float maxSpeed = 15f;     // the speed at which we're at our "fastest" animation. Hardcoded for now, this is the highest x velocity the Player object reaches 
+    
 
     /// <summary>
     /// The maximum and minimum speed modifiers for animations. Animations will get faster or slower based on actual speed, but these values clamp
@@ -29,6 +29,8 @@ public class AnimStateController: MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         GameEvents.current.OnSpeedStateChange += Current_OnSpeedStateChange;
         player = GetComponentInParent<Player>();
+        zoomer = Camera.main.GetComponent<CameraZoomer>();
+        woosher = Camera.main.GetComponent<Woosher>();
     }
 
 
@@ -50,16 +52,22 @@ public class AnimStateController: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown("down"))
             animator.SetTrigger("Slide");
+        
+
 
         if (Input.GetKey(KeyCode.S) || Input.GetKeyDown("down"))
             animator.SetBool("SlideHeld", true);
         else animator.SetBool("SlideHeld", false);
 
+        float scaledSpeed = Mathf.Abs(player.velocity.x) / maxSpeed;
 
-        updateBody(Mathf.Abs(player.velocity.x)/maxSpeed, level); // pass in physical values for animation
+        updateBody(scaledSpeed, level); // pass in physical values for animation
+
+        zoomer.updateCamera(scaledSpeed);
+        woosher.updateWooshing(scaledSpeed);
     }
 
 
@@ -87,7 +95,7 @@ public class AnimStateController: MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+
     }
 
 }
