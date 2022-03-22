@@ -223,7 +223,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bc2d: {fileID: 1155714401}
-  wait_time: 2
 --- !u!1 &305493706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8534386229078387184, guid: f8c90011c9efa3d4e8cad2f078ebfd75, type: 3}
@@ -264,7 +263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0}
   minGroundNormalY: 0.65
-  gravityModifier: 2
+  gravityModifier: 2.5
   grounded: 1
   jumpTakeOffSpeed: 3
 --- !u!1 &328729422
