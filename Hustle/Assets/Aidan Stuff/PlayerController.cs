@@ -7,11 +7,16 @@ using UnityEngine;
 public class PlayerController : Player
 {
     Vector2 move;
+    float deltaVelocity;
     public float jumpTakeOffSpeed = 3f;
     int speedState = 0;
     bool ticked;
-    float tickTimer = 0.1f;
+    float tickTimer = 0.075f;
     // Start is called before the first frame update
+
+    //Wall jump stuff
+    int saved_speedState = 0;
+    float saved_velocity;
     void Start()
     {
         move = Vector2.zero;
@@ -44,26 +49,53 @@ public class PlayerController : Player
         maxSpeed(speedState);
 
         if((Input.GetKeyDown("up") || Input.GetKeyDown(KeyCode.W)) && grounded){
-            velocity.y = jumpTakeOffSpeed + Mathf.Abs(move.x/1.75f);
+            velocity.y = jumpTakeOffSpeed + Mathf.Abs(move.x/1.5f);
         }
-        else if(Input.GetKeyUp("up") || Input.GetKeyDown(KeyCode.W)){
-            if(velocity.y > 0f){
-                velocity.y = velocity.y * 0.5f;
+        //Wall jump stuff
+
+        if(velocity.x == 0 && !grounded)
+        {
+            print(speedState);
+            if (Input.GetKeyDown("up") || Input.GetKeyDown(KeyCode.W)){
+                int i = 2 *speedState;
+                if (speedState > 0)
+                {
+                    while(i > 0)
+                    {
+                        GameEvents.current.SpeedStateChange(-1);
+                        speedState -= 1;
+                        i--;
+                    }
+                }
+                else
+                {
+                    while (i < 0)
+                    {
+                        GameEvents.current.SpeedStateChange(1);
+                        speedState += 1;
+                        i++;
+                    }
+                }
+                velocity.x = speedState *5f;
+                move.x = speedState * 5f;
+                velocity.y = jumpTakeOffSpeed + Mathf.Abs(move.x / 1.75f);
+                print(speedState);
             }
         }
-
+        deltaVelocity = Mathf.Abs(velocity.x - move.x);
         targetVelocity = move;
     }
 
     void maxSpeed(int state){
-        if(velocity.x == 0){
+        if(deltaVelocity > 1.5f){
             move.x = 0;
         }
+        
         if(ticked == true){
             tickTimer -= Time.deltaTime;
             if(tickTimer <= 0.0f){
                 ticked = false;
-                tickTimer = 0.1f;
+                tickTimer = 0.075f;
             }
         }
 
