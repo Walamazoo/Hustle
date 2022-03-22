@@ -330,6 +330,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8534386228017251483, guid: f8c90011c9efa3d4e8cad2f078ebfd75, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.49
+      objectReference: {fileID: 0}
     - target: {fileID: 8534386229078387184, guid: f8c90011c9efa3d4e8cad2f078ebfd75, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2005,7 +2009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnSpeed: 0
-  respawn: {fileID: 0}
+  respawn: {fileID: 924361467}
 --- !u!4 &1421754486
 Transform:
   m_ObjectHideFlags: 0
@@ -2367,7 +2371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnSpeed: 0
-  respawn: {fileID: 0}
+  respawn: {fileID: 924361467}
 --- !u!4 &1721226538
 Transform:
   m_ObjectHideFlags: 0

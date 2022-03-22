@@ -8,11 +8,11 @@ public class Respawn : MonoBehaviour
 
     public GameObject currentCheckpoint;
 
-    void OnColliderEnter(Collider2D other){
+    void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Player")){
             Debug.Log("respawn");
             Destroy(other.gameObject.transform.parent);
-            Instantiate(playerPrefab, new Vector2(currentCheckpoint.transform.position.x, currentCheckpoint.transform.position.y), Quaternion.identity);
+            Instantiate(playerPrefab, new Vector2(currentCheckpoint.transform.position.x, currentCheckpoint.transform.position.y+1), Quaternion.identity);
             //put player's speed to the checkpoint's respawnSpeed value
         }
     }
