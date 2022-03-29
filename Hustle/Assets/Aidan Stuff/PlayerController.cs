@@ -50,11 +50,34 @@ public class PlayerController : Player
                 speedState = -3;
             }
         }
-        
+
+        if(Input.GetKeyDown("space")){
+            if(speedState > 0){
+                int i = speedState;
+                while(i > 0){
+                    GameEvents.current.SpeedStateChange(-1);
+                    i--;
+                }
+            }
+            else{
+                int i = speedState;
+                while(i < 0){
+                    GameEvents.current.SpeedStateChange(1);
+                    i++;
+                }
+            }
+            speedState = 0;
+        }
+
         maxSpeed(speedState);
 
         if((Input.GetKeyDown("up") || Input.GetKeyDown(KeyCode.W)) && grounded){
-            velocity.y = jumpTakeOffSpeed + Mathf.Abs(move.x/1.5f);
+            if(Mathf.Abs(speedState) == 1 || speedState == 0){
+                velocity.y = jumpTakeOffSpeed + Mathf.Abs(move.x);
+            }
+            else{
+                velocity.y = jumpTakeOffSpeed + Mathf.Abs(move.x/1.5f);
+            }
         }
         //Wall jump stuff
 
@@ -108,7 +131,7 @@ public class PlayerController : Player
             tickTimer -= Time.deltaTime;
             if(tickTimer <= 0.0f){
                 ticked = false;
-                tickTimer = 0.075f;
+                tickTimer = 0.05f;
             }
         }
 
