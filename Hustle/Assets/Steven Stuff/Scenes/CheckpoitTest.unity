@@ -442,6 +442,7 @@ MonoBehaviour:
   gravityModifier: 2.5
   grounded: 1
   jumpTakeOffSpeed: 3
+  check_collider: {fileID: 0}
 --- !u!50 &137936163
 Rigidbody2D:
   serializedVersion: 4
@@ -1474,6 +1475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 137936157}
+  player: {fileID: 137936162}
   currentCheckpoint: {fileID: 0}
 --- !u!61 &924361468
 BoxCollider2D:
@@ -2008,8 +2010,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: debf3c8375d5dee45816b126f65e994d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnSpeed: 0
+  respawnSpeed: 2
   respawn: {fileID: 924361467}
+  respawnIndex: 1
 --- !u!4 &1421754486
 Transform:
   m_ObjectHideFlags: 0
@@ -2370,8 +2373,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: debf3c8375d5dee45816b126f65e994d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnSpeed: 0
+  respawnSpeed: -1
   respawn: {fileID: 924361467}
+  respawnIndex: 2
 --- !u!4 &1721226538
 Transform:
   m_ObjectHideFlags: 0
