@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class PlayerController : Player
 {
+    
     Vector2 move;
     float deltaVelocity;
     public float jumpTakeOffSpeed = 3f;
@@ -25,7 +26,7 @@ public class PlayerController : Player
 
     protected override void ComputeVelocity(){
 
-        if(Input.GetKeyDown("right") || Input.GetKeyDown(KeyCode.D)){
+        if((Input.GetKeyDown("right") || Input.GetKeyDown(KeyCode.D))&& !Slide.is_sliding){
 
             //New code using Event System
             GameEvents.current.SpeedStateChange(1);
@@ -35,7 +36,8 @@ public class PlayerController : Player
                 speedState = 3;
             }
         }
-        if(Input.GetKeyDown("left") || Input.GetKeyDown(KeyCode.A)){
+        if((Input.GetKeyDown("left") || Input.GetKeyDown(KeyCode.A))&& !Slide.is_sliding)
+        {
 
             //New code using Event System
             GameEvents.current.SpeedStateChange(-1);
@@ -82,6 +84,18 @@ public class PlayerController : Player
                 print(speedState);
             }
         }
+        /*
+        if (velocity.x > 0 && Slide.is_sliding)
+        {
+            Slide.shifted_value = -1f;
+        }
+        if (velocity.x < 0 && Slide.is_sliding)
+        {
+            Slide.shifted_value = 1f;
+        }
+        */
+        
+      
         deltaVelocity = Mathf.Abs(velocity.x - move.x);
         targetVelocity = move;
     }

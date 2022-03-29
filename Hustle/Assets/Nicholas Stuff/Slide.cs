@@ -8,9 +8,15 @@ public class Slide : MonoBehaviour
 {
     public BoxCollider2D bc2d;
     float bc_h;
-    bool is_sliding = false;
-    bool can_stop_sliding = true;
+    public static bool is_sliding = false;
+    public static bool can_stop_sliding = true;
     int layerMask = 1 << 6;
+    public static float shifted_value = 1f;
+    Vector3 direction;
+
+    public static Slide slide;
+    
+    
     
     // Start is called before the first frame update
     void Start()
@@ -20,14 +26,14 @@ public class Slide : MonoBehaviour
 
     void CanStop()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.up), 2f, layerMask);
-        if (hit)
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + direction, transform.TransformDirection(Vector2.up), 2f, layerMask);
+        RaycastHit2D hit2 = Physics2D.Raycast(transform.position - direction, transform.TransformDirection(Vector2.up), 2f, layerMask);
+        if (hit || hit2)
         {
-            can_stop_sliding = false;
+            can_stop_sliding = false;            
         }
-        else
+        else if (!hit && !hit2)
         {
-            
             can_stop_sliding = true;
         }
     }
@@ -36,6 +42,8 @@ public class Slide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        direction = new Vector3(shifted_value, 0, 0);
+        
         CanStop();
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown("down")|| is_sliding)
         {
@@ -58,12 +66,8 @@ public class Slide : MonoBehaviour
                 bc2d.size = new Vector2(bc_h, bc_h);
                 bc2d.offset = new Vector2(0, 0);
             }
-            
-
         }
-        
-        
-
+   
     }
         
     
