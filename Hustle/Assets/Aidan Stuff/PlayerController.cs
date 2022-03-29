@@ -13,11 +13,13 @@ public class PlayerController : Player
     int speedState = 0;
     bool ticked;
     float tickTimer = 0.075f;
+    bool just_wall_jumped = false;
     // Start is called before the first frame update
 
     //Wall jump stuff
     int saved_speedState = 0;
     float saved_velocity;
+    public BoxCollider2D check_collider;
     void Start()
     {
         move = Vector2.zero;
@@ -26,7 +28,8 @@ public class PlayerController : Player
 
     protected override void ComputeVelocity(){
 
-        if((Input.GetKeyDown("right") || Input.GetKeyDown(KeyCode.D))&& !Slide.is_sliding){
+        if((Input.GetKeyDown("right") || Input.GetKeyDown(KeyCode.D))&& (!Slide.is_sliding && !just_wall_jumped))
+        {
 
             //New code using Event System
             GameEvents.current.SpeedStateChange(1);
@@ -36,7 +39,7 @@ public class PlayerController : Player
                 speedState = 3;
             }
         }
-        if((Input.GetKeyDown("left") || Input.GetKeyDown(KeyCode.A))&& !Slide.is_sliding)
+        if((Input.GetKeyDown("left") || Input.GetKeyDown(KeyCode.A))&& (!Slide.is_sliding && !just_wall_jumped))
         {
 
             //New code using Event System
@@ -47,7 +50,7 @@ public class PlayerController : Player
                 speedState = -3;
             }
         }
-
+        
         maxSpeed(speedState);
 
         if((Input.GetKeyDown("up") || Input.GetKeyDown(KeyCode.W)) && grounded){
@@ -58,8 +61,10 @@ public class PlayerController : Player
         if(velocity.x == 0 && !grounded)
         {
             print(speedState);
+            
             if (Input.GetKeyDown("up") || Input.GetKeyDown(KeyCode.W)){
                 int i = 2 *speedState;
+                //just_wall_jumped = true;
                 if (speedState > 0)
                 {
                     while(i > 0)
@@ -84,16 +89,10 @@ public class PlayerController : Player
                 print(speedState);
             }
         }
-        /*
-        if (velocity.x > 0 && Slide.is_sliding)
+        if (grounded)
         {
-            Slide.shifted_value = -1f;
+            just_wall_jumped = false;
         }
-        if (velocity.x < 0 && Slide.is_sliding)
-        {
-            Slide.shifted_value = 1f;
-        }
-        */
         
       
         deltaVelocity = Mathf.Abs(velocity.x - move.x);
@@ -194,5 +193,10 @@ public class PlayerController : Player
                 ticked = true;
             }
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        just_wall_jumped = true;
     }
 }
