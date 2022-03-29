@@ -10,12 +10,12 @@ public class Checkpoint : MonoBehaviour
     private int _currentIndex = 0;
 
     void OnTriggerEnter2D(Collider2D other){
-        if(other.CompareTag("Player")){
+        //if(other.CompareTag("Player")){
             Debug.Log("checkpoint");
             if(this.respawnIndex > _currentIndex){
                 _currentIndex = this.respawnIndex;
                 respawn.currentCheckpoint = this;
             }
-        }
+        //}
     }
 }

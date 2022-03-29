@@ -23,9 +23,10 @@ public class Respawn : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if(other.CompareTag("Player")){
+        //if(other.CompareTag("Player")){
             Debug.Log("respawn");
-            other.gameObject.transform.parent.gameObject.transform.position = new Vector2(currentCheckpoint.transform.position.x, currentCheckpoint.transform.position.y+1);
+            //other.gameObject.transform.parent.gameObject.transform.position = new Vector2(currentCheckpoint.transform.position.x, currentCheckpoint.transform.position.y+1);
+            other.gameObject.transform.position = new Vector2(currentCheckpoint.transform.position.x, currentCheckpoint.transform.position.y+1);
             if (_speedState > currentCheckpoint.respawnSpeed){
                 Debug.Log("Decreasing speed state");
                 while(_speedState > currentCheckpoint.respawnSpeed){
@@ -40,7 +41,7 @@ public class Respawn : MonoBehaviour
                     Debug.Log(_speedState);
                 }
             }
-        }
+        //}
     }
 
 }
