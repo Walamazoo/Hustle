@@ -6,7 +6,7 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     [SerializeField] bool timerIsRunning = false; 
-    [SerializeField] TextMeshProUGUI timerText;
+    public TextMeshProUGUI timerText;
 
     public float time;
     private float minutes;
