@@ -28,7 +28,7 @@ public class AnimStateController: MonoBehaviour
     {
         animator = GetComponentInChildren<Animator>();
         GameEvents.current.OnSpeedStateChange += Current_OnSpeedStateChange;
-        player = GetComponentInParent<Player>();
+        player = GetComponentInParent<PlayerController>();
         zoomer = Camera.main.GetComponent<CameraZoomer>();
         woosher = Camera.main.GetComponent<Woosher>();
     }
