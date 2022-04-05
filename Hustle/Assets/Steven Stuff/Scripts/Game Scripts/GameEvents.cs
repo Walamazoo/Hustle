@@ -11,6 +11,8 @@ public class GameEvents : MonoBehaviour
 
     public event Action<int> OnSpeedStateChange;
 
+    public event Action OnLevelCompleteChange;
+
     private void Awake(){
         if (current == null){
             current = this;
@@ -25,5 +27,11 @@ public class GameEvents : MonoBehaviour
     public void SpeedStateChange(int direction){
         Debug.Log("SpeedStateChange");
         OnSpeedStateChange?.Invoke(direction);
+    }
+
+    public void LevelCompleteChange(){
+        if(OnLevelCompleteChange != null){
+            OnLevelCompleteChange();
+        }
     }
 }
