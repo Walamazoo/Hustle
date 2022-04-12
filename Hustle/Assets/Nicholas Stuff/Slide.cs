@@ -69,8 +69,6 @@ public class Slide : MonoBehaviour
             }
         }
 
-wd
-
     }
         
     
