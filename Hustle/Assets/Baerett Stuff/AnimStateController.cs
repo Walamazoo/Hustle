@@ -55,16 +55,23 @@ public class AnimStateController: MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown("down"))
             animator.SetTrigger("Slide");
-        
 
-
-        if (Input.GetKey(KeyCode.S) || Input.GetKeyDown("down"))
-            animator.SetBool("SlideHeld", true);
+        if (Slide.is_sliding) animator.SetBool("SlideHeld", true);
         else animator.SetBool("SlideHeld", false);
 
-        float scaledSpeed = Mathf.Abs(player.velocity.x) / maxSpeed;
 
-        updateBody(scaledSpeed, level); // pass in physical values for animation
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+            animator.SetTrigger("Jump");
+        }
+
+        animator.SetBool("Grounded", player.grounded);
+
+
+        float scaledSpeed = Mathf.Abs(player.velocity.x) / maxSpeed;
+        float scaledVerticalSpeed = Mathf.Abs(player.velocity.y) / maxSpeed;
+        
+        updateBody(scaledSpeed, scaledVerticalSpeed, level); // pass in physical values for animation
 
         zoomer.updateCamera(scaledSpeed);
         woosher.updateWooshing(scaledSpeed);
@@ -76,13 +83,12 @@ public class AnimStateController: MonoBehaviour
     /// </summary>
     /// <param name="scaledSpeed"> Speed as represented by a decimal value between 0 and 1, with 0 being stopped and 1 being full speed. Used for animation blending. </param>
     /// <param name="targetLevel"> The current target level (of speed).</param>
-    void updateBody(float scaledSpeed, int targetLevel)
+    void updateBody(float scaledSpeed, float scaledVerticalSpeed, int targetLevel)
     {
-        //transform.rotation = Quaternion.Euler(0, 0, Mathf.LerpAngle(0, (currentSpeed < 0 ? 1 : -1) * maxAngle, Mathf.Abs(currentSpeed) / 3));   //LEANING FORWARD W/ SPEED
-
         if (targetLevel < 0) transform.rotation = Quaternion.Euler(0, 180, 0);
         else if(targetLevel != 0) transform.rotation = Quaternion.Euler(0, 0, 0);
         animator.SetFloat("Speed", scaledSpeed);
+        animator.SetFloat("VerticalSpeed", scaledVerticalSpeed);
         animator.SetFloat("AnimSpeedMod", getAnimSpeedMod(scaledSpeed));
     }
 
