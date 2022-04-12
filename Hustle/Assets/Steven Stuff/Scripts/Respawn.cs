@@ -53,9 +53,10 @@ public class Respawn : MonoBehaviour
         if(currentCheckpoint == null){
             player.gameObject.transform.position = _startPosition;
         }
-        /*
+        
         else{
-            player.gameObject.transform.position = new Vector2(currentCheckpoint.transform.position.x, currentCheckpoint.transform.position.y+1);
+            player.gameObject.transform.position = new Vector2(currentCheckpoint.transform.position.x, currentCheckpoint.transform.position.y+2);
+            /*
             if (_speedState > currentCheckpoint.respawnSpeed){
                 //Debug.Log("Decreasing speed state");
                 while(_speedState > currentCheckpoint.respawnSpeed){
@@ -70,7 +71,8 @@ public class Respawn : MonoBehaviour
                     //Debug.Log(_speedState);
                 }
             }
+            */
         }
-        */
+        
     }
 }
