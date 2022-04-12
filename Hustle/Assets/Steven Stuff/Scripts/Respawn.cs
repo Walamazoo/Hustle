@@ -24,27 +24,27 @@ public class Respawn : MonoBehaviour
     }
 
     void UpdateSpeedState(int direction){
-        Debug.Log("Update speed state");
+        //Debug.Log("Update speed state");
         if(_speedState !>= 3 || _speedState !<= -3){
             _speedState += direction;
         }
-        Debug.Log(_speedState);
+        //Debug.Log(_speedState);
     }
 
     void OnTriggerEnter2D(Collider2D other){
             other.gameObject.transform.position = new Vector2(currentCheckpoint.transform.position.x, currentCheckpoint.transform.position.y+1);
             if (_speedState > currentCheckpoint.respawnSpeed){
-                Debug.Log("Decreasing speed state");
+                //Debug.Log("Decreasing speed state");
                 while(_speedState > currentCheckpoint.respawnSpeed){
                     GameEvents.current.SpeedStateChange(-1);
-                    Debug.Log(_speedState);
+                    //Debug.Log(_speedState);
                 }
             }
             else if(_speedState < currentCheckpoint.respawnSpeed){
-                Debug.Log("Increasing speed state");
+                //Debug.Log("Increasing speed state");
                 while (_speedState < currentCheckpoint.respawnSpeed){
                     GameEvents.current.SpeedStateChange(1);
-                    Debug.Log(_speedState);
+                    //Debug.Log(_speedState);
                 }
             }
     }
@@ -53,22 +53,24 @@ public class Respawn : MonoBehaviour
         if(currentCheckpoint == null){
             player.gameObject.transform.position = _startPosition;
         }
+        /*
         else{
             player.gameObject.transform.position = new Vector2(currentCheckpoint.transform.position.x, currentCheckpoint.transform.position.y+1);
             if (_speedState > currentCheckpoint.respawnSpeed){
-                Debug.Log("Decreasing speed state");
+                //Debug.Log("Decreasing speed state");
                 while(_speedState > currentCheckpoint.respawnSpeed){
                     GameEvents.current.SpeedStateChange(-1);
-                    Debug.Log(_speedState);
+                    //Debug.Log(_speedState);
                 }
             }
             else if(_speedState < currentCheckpoint.respawnSpeed){
-                Debug.Log("Increasing speed state");
+                //Debug.Log("Increasing speed state");
                 while (_speedState < currentCheckpoint.respawnSpeed){
                     GameEvents.current.SpeedStateChange(1);
-                    Debug.Log(_speedState);
+                    //Debug.Log(_speedState);
                 }
             }
         }
+        */
     }
 }

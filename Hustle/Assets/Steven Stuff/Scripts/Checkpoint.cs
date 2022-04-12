@@ -15,7 +15,7 @@ public class Checkpoint : MonoBehaviour
     
 
     void OnTriggerEnter2D(Collider2D other){
-            Debug.Log("checkpoint");
+            //Debug.Log("checkpoint");
             if(this.respawnIndex > _currentIndex){
                 _currentIndex = this.respawnIndex;
                 respawn.currentCheckpoint = this;
