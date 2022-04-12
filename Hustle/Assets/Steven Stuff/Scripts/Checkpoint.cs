@@ -10,6 +10,7 @@ public class Checkpoint : MonoBehaviour
     [SerializeField] int respawnIndex;
     [SerializeField] Timer timer;
     [SerializeField] TextMeshPro checkpointTimeText;
+    [SerializeField] GameObject flag;
     private int _currentIndex = 0;
     
 
@@ -19,6 +20,7 @@ public class Checkpoint : MonoBehaviour
                 _currentIndex = this.respawnIndex;
                 respawn.currentCheckpoint = this;
 
+                flag.SetActive(true);
                 float minutes = Mathf.FloorToInt(timer.time / 60); 
                 float seconds = Mathf.FloorToInt(timer.time % 60);
                 this.checkpointTimeText.text = string.Format("{0:00} {1:00}", minutes, seconds);
