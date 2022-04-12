@@ -10278,6 +10278,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -2.1
       objectReference: {fileID: 0}
+    - target: {fileID: 4100694125542733962, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100694125542733962, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100694125542733962, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4955558385047672771, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
+      propertyPath: parallexEffect
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 4987253445232510563, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 57.469734
