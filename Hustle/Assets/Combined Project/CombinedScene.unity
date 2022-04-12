@@ -8109,6 +8109,8 @@ MonoBehaviour:
   respawnSpeed: 2
   respawn: {fileID: 686685346}
   respawnIndex: 1
+  timer: {fileID: 0}
+  checkpointTimeText: {fileID: 0}
 --- !u!4 &1582209119
 Transform:
   m_ObjectHideFlags: 0
@@ -10312,7 +10314,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -40.500015
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8757709562262150939, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
 --- !u!114 &6265066761620260366 stripped
 MonoBehaviour:
