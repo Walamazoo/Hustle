@@ -13,6 +13,7 @@ public class Slide : MonoBehaviour
     int layerMask = 1 << 6;
     public static float shifted_value = 1f;
     Vector3 direction;
+    //public GameObject trail;
 
     public static Slide slide;
     
@@ -67,7 +68,9 @@ public class Slide : MonoBehaviour
                 bc2d.offset = new Vector2(0, 0);
             }
         }
-   
+
+wd
+
     }
         
     
