@@ -27,8 +27,8 @@ public class UIChanger : MonoBehaviour
     {
         GameEvents.current.OnSpeedStateChange += UpdateUI;
         GameEvents.current.OnLevelCompleteChange += EndUI;
-        float time = Timer.GetComponent<Timer>().time;
-        TextMeshProUGUI endtext = EndText.GetComponent<TextMeshProUGUI>();
+        time = Timer.GetComponent<Timer>().time;
+        endtext = EndText.GetComponent<TextMeshProUGUI>();
     }
 
     private void UpdateUI(int direction){
@@ -57,6 +57,7 @@ public class UIChanger : MonoBehaviour
     }
 
     private void EndUI(){
+        time = Timer.GetComponent<Timer>().time;
         float seconds = Mathf.FloorToInt(time % 60);
         float minutes = Mathf.FloorToInt(time / 60); 
         string timetext = string.Format("{0:00} : {1:00}", minutes, seconds);
