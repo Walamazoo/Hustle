@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class GameEvents : MonoBehaviour
 {
+    public int speedState = 0; 
+    
     public static GameEvents current;
 
     public event Action<int> OnSpeedStateChange;
@@ -26,6 +28,7 @@ public class GameEvents : MonoBehaviour
 
     public void SpeedStateChange(int direction){
         Debug.Log("SpeedStateChange");
+        //speedState += direction;
         OnSpeedStateChange?.Invoke(direction);
     }
 

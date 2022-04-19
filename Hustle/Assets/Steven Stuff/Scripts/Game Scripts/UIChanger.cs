@@ -17,10 +17,11 @@ public class UIChanger : MonoBehaviour
     [SerializeField] float GoldTimer;
     [SerializeField] float SilverTimer;
     [SerializeField] GameObject button;
+    [SerializeField] GameEvents stateHolder;
 
     float time;
     TextMeshProUGUI endtext;
-    private int _arrowIndex = 0;
+    //private int _arrowIndex = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -34,24 +35,24 @@ public class UIChanger : MonoBehaviour
     private void UpdateUI(int direction){
         Debug.Log("Update UI");
         if(direction > 0){
-            if(_arrowIndex >= 0 && _arrowIndex < 3){
-                rightArrows[_arrowIndex].SetActive(true);
-                _arrowIndex += direction;
+            if(stateHolder.speedState >= 0 && stateHolder.speedState < 3){
+                rightArrows[stateHolder.speedState].SetActive(true);
+                stateHolder.speedState += direction;
             }
-            else if(_arrowIndex <= 0 && _arrowIndex > -4){
-                _arrowIndex += direction;
-                leftArrows[Mathf.Abs(_arrowIndex)].SetActive(false);
+            else if(stateHolder.speedState <= 0 && stateHolder.speedState > -4){
+                stateHolder.speedState += direction;
+                leftArrows[Mathf.Abs(stateHolder.speedState)].SetActive(false);
             }
         }
 
         else{
-            if(_arrowIndex <= 0 && _arrowIndex > -3){
-                leftArrows[Mathf.Abs(_arrowIndex)].SetActive(true);
-                _arrowIndex += direction;
+            if(stateHolder.speedState <= 0 && stateHolder.speedState > -3){
+                leftArrows[Mathf.Abs(stateHolder.speedState)].SetActive(true);
+                stateHolder.speedState += direction;
             }
-            else if(_arrowIndex >= 0 && _arrowIndex < 4){
-                _arrowIndex += direction;
-                rightArrows[_arrowIndex].SetActive(false);
+            else if(stateHolder.speedState >= 0 && stateHolder.speedState < 4){
+                stateHolder.speedState += direction;
+                rightArrows[stateHolder.speedState].SetActive(false);
             }
         }
     }
