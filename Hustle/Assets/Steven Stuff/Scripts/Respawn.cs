@@ -7,13 +7,14 @@ public class Respawn : MonoBehaviour
     [SerializeField] PlayerController player;
 
     public Checkpoint currentCheckpoint;
-    private int _speedState = 0;
+    
+    [SerializeField] GameEvents stateHolder;
 
     private Vector2 _startPosition;
 
      void Start()
     {
-        GameEvents.current.OnSpeedStateChange += UpdateSpeedState;
+        //GameEvents.current.OnSpeedStateChange += UpdateSpeedState;
         _startPosition = player.gameObject.transform.position;
     }
 
@@ -25,24 +26,24 @@ public class Respawn : MonoBehaviour
 
     void UpdateSpeedState(int direction){
         //Debug.Log("Update speed state");
-        if(_speedState !>= 3 || _speedState !<= -3){
-            _speedState += direction;
+        if(stateHolder.speedState !>= 3 || stateHolder.speedState !<= -3){
+            stateHolder.speedState += direction;
         }
         //Debug.Log(_speedState);
     }
 
     void OnTriggerEnter2D(Collider2D other){
             other.gameObject.transform.position = new Vector2(currentCheckpoint.transform.position.x, currentCheckpoint.transform.position.y+1);
-            if (_speedState > currentCheckpoint.respawnSpeed){
+            if (stateHolder.speedState > currentCheckpoint.respawnSpeed){
                 //Debug.Log("Decreasing speed state");
-                while(_speedState > currentCheckpoint.respawnSpeed){
+                while(stateHolder.speedState > currentCheckpoint.respawnSpeed){
                     GameEvents.current.SpeedStateChange(-1);
                     //Debug.Log(_speedState);
                 }
             }
-            else if(_speedState < currentCheckpoint.respawnSpeed){
+            else if(stateHolder.speedState < currentCheckpoint.respawnSpeed){
                 //Debug.Log("Increasing speed state");
-                while (_speedState < currentCheckpoint.respawnSpeed){
+                while (stateHolder.speedState < currentCheckpoint.respawnSpeed){
                     GameEvents.current.SpeedStateChange(1);
                     //Debug.Log(_speedState);
                 }
@@ -56,22 +57,22 @@ public class Respawn : MonoBehaviour
         
         else{
             player.gameObject.transform.position = new Vector2(currentCheckpoint.transform.position.x, currentCheckpoint.transform.position.y+2);
-            /*
-            if (_speedState > currentCheckpoint.respawnSpeed){
+            
+            if (stateHolder.speedState > currentCheckpoint.respawnSpeed){
                 //Debug.Log("Decreasing speed state");
-                while(_speedState > currentCheckpoint.respawnSpeed){
+                while(stateHolder.speedState > currentCheckpoint.respawnSpeed){
                     GameEvents.current.SpeedStateChange(-1);
                     //Debug.Log(_speedState);
                 }
             }
-            else if(_speedState < currentCheckpoint.respawnSpeed){
+            else if(stateHolder.speedState < currentCheckpoint.respawnSpeed){
                 //Debug.Log("Increasing speed state");
-                while (_speedState < currentCheckpoint.respawnSpeed){
+                while (stateHolder.speedState < currentCheckpoint.respawnSpeed){
                     GameEvents.current.SpeedStateChange(1);
                     //Debug.Log(_speedState);
                 }
             }
-            */
+            
         }
         
     }

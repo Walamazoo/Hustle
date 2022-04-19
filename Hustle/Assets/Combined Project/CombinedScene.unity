@@ -3586,6 +3586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 6265066761620260366}
   currentCheckpoint: {fileID: 0}
+  stateHolder: {fileID: 1685055818}
 --- !u!61 &686685347
 BoxCollider2D:
   m_ObjectHideFlags: 0
