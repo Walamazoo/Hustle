@@ -91,7 +91,10 @@ public class UIChanger : MonoBehaviour
 
         path = Application.dataPath + "/Aidan Stuff/" + "SavedTimes.txt";
         lines = File.ReadAllLines(path);
-        lines[Level] = time.ToString();
+        float timeToCompare = float.Parse(lines[LevelNumber], CultureInfo.InvariantCulture.NumberFormat);
+        if(time < timeToCompare && timeToCompare != 0.0f){
+            lines[Level] = time.ToString();
+        }
         File.WriteAllLines(path, lines);
     }
 
