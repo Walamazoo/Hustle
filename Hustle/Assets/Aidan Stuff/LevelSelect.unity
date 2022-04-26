@@ -472,11 +472,28 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1192733287243030937, guid: 8a7320b8550b131488c48140e80f6203, type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1192733287243030937, guid: 8a7320b8550b131488c48140e80f6203, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1192733287243030937, guid: 8a7320b8550b131488c48140e80f6203, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1192733287243030937, guid: 8a7320b8550b131488c48140e80f6203, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7041171722834863966, guid: 8a7320b8550b131488c48140e80f6203, type: 3}
       propertyPath: LevelNumber
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8604612725346504752, guid: 8a7320b8550b131488c48140e80f6203, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8a7320b8550b131488c48140e80f6203, type: 3}
 --- !u!224 &1070322088 stripped
 RectTransform:
@@ -660,6 +677,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726125950}
   m_CullTransparentMesh: 1
+--- !u!1 &2128981771 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1192733285743955114, guid: 8a7320b8550b131488c48140e80f6203, type: 3}
+  m_PrefabInstance: {fileID: 1070322087}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &2128981772
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128981771}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.79948235, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 125, y: 75}
+  m_EdgeRadius: 0
 --- !u!1 &2137649703
 GameObject:
   m_ObjectHideFlags: 0

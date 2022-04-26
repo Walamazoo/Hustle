@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.IO;
 
 //Made with help from https://www.youtube.com/watch?v=gx0Lt4tCDE0
 
@@ -21,6 +22,9 @@ public class UIChanger : MonoBehaviour
 
     float time;
     TextMeshProUGUI endtext;
+    public int Level;
+    string[] lines;
+    string path;
     //private int _arrowIndex = 0;
 
     // Start is called before the first frame update
@@ -84,6 +88,11 @@ public class UIChanger : MonoBehaviour
         }
         EndText.SetActive(true);
         button.SetActive(true);
+
+        path = Application.dataPath + "/Aidan Stuff/" + "SavedTimes.txt";
+        lines = File.ReadAllLines(path);
+        lines[Level] = time.ToString();
+        File.WriteAllLines(path, lines);
     }
 
 }
