@@ -33,21 +33,7 @@ public class Respawn : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-            other.gameObject.transform.position = new Vector2(currentCheckpoint.transform.position.x, currentCheckpoint.transform.position.y+1);
-            if (stateHolder.speedState > currentCheckpoint.respawnSpeed){
-                //Debug.Log("Decreasing speed state");
-                while(stateHolder.speedState > currentCheckpoint.respawnSpeed){
-                    GameEvents.current.SpeedStateChange(-1);
-                    //Debug.Log(_speedState);
-                }
-            }
-            else if(stateHolder.speedState < currentCheckpoint.respawnSpeed){
-                //Debug.Log("Increasing speed state");
-                while (stateHolder.speedState < currentCheckpoint.respawnSpeed){
-                    GameEvents.current.SpeedStateChange(1);
-                    //Debug.Log(_speedState);
-                }
-            }
+        Reset();
     }
 
     void Reset(){
