@@ -1036,6 +1036,66 @@ PrefabInstance:
       propertyPath: respawnSpeed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: splitBacks.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: splitBacks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1626320911}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: splitBacks.Array.data[1]
+      value: 
+      objectReference: {fileID: 973673215}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: splitBacks.Array.data[2]
+      value: 
+      objectReference: {fileID: 727148307}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: splitBacks.Array.data[3]
+      value: 
+      objectReference: {fileID: 1542141079}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunTimeTexts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunSplitTexts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunTimeTexts.Array.data[0]
+      value: 
+      objectReference: {fileID: 1528778044}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunTimeTexts.Array.data[1]
+      value: 
+      objectReference: {fileID: 911851570}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunTimeTexts.Array.data[2]
+      value: 
+      objectReference: {fileID: 2143201321}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunTimeTexts.Array.data[3]
+      value: 
+      objectReference: {fileID: 591546475}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunSplitTexts.Array.data[0]
+      value: 
+      objectReference: {fileID: 908941223}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunSplitTexts.Array.data[1]
+      value: 
+      objectReference: {fileID: 1806048149}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunSplitTexts.Array.data[2]
+      value: 
+      objectReference: {fileID: 765290525}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunSplitTexts.Array.data[3]
+      value: 
+      objectReference: {fileID: 870547083}
     - target: {fileID: 4690317737761916023, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
       propertyPath: m_Name
       value: Checkpoint (1)
@@ -3198,6 +3258,17 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!114 &591546475 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1184392959436326222, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
+  m_PrefabInstance: {fileID: 6265066761620260365}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &592730150
 GameObject:
   m_ObjectHideFlags: 0
@@ -3810,6 +3881,11 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!1 &727148307 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2870703311334091293, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
+  m_PrefabInstance: {fileID: 6265066761620260365}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &748517661
 GameObject:
   m_ObjectHideFlags: 0
@@ -3993,6 +4069,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7759802965859967531, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
   m_PrefabInstance: {fileID: 6265066761620260365}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &765290525 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5924430924342238135, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
+  m_PrefabInstance: {fileID: 6265066761620260365}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &855282588
 GameObject:
   m_ObjectHideFlags: 0
@@ -4301,6 +4388,17 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!114 &870547083 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4670218050487855673, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
+  m_PrefabInstance: {fileID: 6265066761620260365}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &873816368
 GameObject:
   m_ObjectHideFlags: 0
@@ -4657,6 +4755,33 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!114 &908941223 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9031852895895387760, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
+  m_PrefabInstance: {fileID: 6265066761620260365}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &911851570 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6922309125532740733, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
+  m_PrefabInstance: {fileID: 6265066761620260365}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &973673215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 368231923503026730, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
+  m_PrefabInstance: {fileID: 6265066761620260365}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &982274739 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6780316571876399592, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
@@ -6114,6 +6239,66 @@ PrefabInstance:
       propertyPath: respawnSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: splitBacks.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: splitBacks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1626320911}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: splitBacks.Array.data[1]
+      value: 
+      objectReference: {fileID: 973673215}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: splitBacks.Array.data[2]
+      value: 
+      objectReference: {fileID: 727148307}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: splitBacks.Array.data[3]
+      value: 
+      objectReference: {fileID: 1542141079}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunTimeTexts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunSplitTexts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunTimeTexts.Array.data[0]
+      value: 
+      objectReference: {fileID: 1528778044}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunTimeTexts.Array.data[1]
+      value: 
+      objectReference: {fileID: 911851570}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunTimeTexts.Array.data[2]
+      value: 
+      objectReference: {fileID: 2143201321}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunTimeTexts.Array.data[3]
+      value: 
+      objectReference: {fileID: 591546475}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunSplitTexts.Array.data[0]
+      value: 
+      objectReference: {fileID: 908941223}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunSplitTexts.Array.data[1]
+      value: 
+      objectReference: {fileID: 1806048149}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunSplitTexts.Array.data[2]
+      value: 
+      objectReference: {fileID: 765290525}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunSplitTexts.Array.data[3]
+      value: 
+      objectReference: {fileID: 870547083}
     - target: {fileID: 4690317737761916023, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
       propertyPath: m_Name
       value: Checkpoint (3)
@@ -7262,6 +7447,66 @@ PrefabInstance:
       propertyPath: respawnSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: splitBacks.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: splitBacks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1626320911}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: splitBacks.Array.data[1]
+      value: 
+      objectReference: {fileID: 973673215}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: splitBacks.Array.data[2]
+      value: 
+      objectReference: {fileID: 727148307}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: splitBacks.Array.data[3]
+      value: 
+      objectReference: {fileID: 1542141079}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunTimeTexts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunSplitTexts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunTimeTexts.Array.data[0]
+      value: 
+      objectReference: {fileID: 1528778044}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunTimeTexts.Array.data[1]
+      value: 
+      objectReference: {fileID: 911851570}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunTimeTexts.Array.data[2]
+      value: 
+      objectReference: {fileID: 2143201321}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunTimeTexts.Array.data[3]
+      value: 
+      objectReference: {fileID: 591546475}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunSplitTexts.Array.data[0]
+      value: 
+      objectReference: {fileID: 908941223}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunSplitTexts.Array.data[1]
+      value: 
+      objectReference: {fileID: 1806048149}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunSplitTexts.Array.data[2]
+      value: 
+      objectReference: {fileID: 765290525}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunSplitTexts.Array.data[3]
+      value: 
+      objectReference: {fileID: 870547083}
     - target: {fileID: 4690317737761916023, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
       propertyPath: m_Name
       value: Checkpoint (2)
@@ -7708,6 +7953,17 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!114 &1528778044 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1583391822230065195, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
+  m_PrefabInstance: {fileID: 6265066761620260365}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1535776455
 GameObject:
   m_ObjectHideFlags: 0
@@ -8064,6 +8320,11 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!1 &1542141079 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 70470506729273070, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
+  m_PrefabInstance: {fileID: 6265066761620260365}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1545329747
 GameObject:
   m_ObjectHideFlags: 0
@@ -8308,6 +8569,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1626320911 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8946798210725661896, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
+  m_PrefabInstance: {fileID: 6265066761620260365}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1683007189
 GameObject:
   m_ObjectHideFlags: 0
@@ -8574,6 +8840,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1806048149 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4368385004229686199, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
+  m_PrefabInstance: {fileID: 6265066761620260365}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1827472392
 GameObject:
   m_ObjectHideFlags: 0
@@ -10365,6 +10642,17 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: -0.00000023841858, z: 0}
     m_Extent: {x: 2.0000002, y: 2, z: 0}
+--- !u!114 &2143201321 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4128865382713116518, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
+  m_PrefabInstance: {fileID: 6265066761620260365}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1192733285915522555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10550,6 +10838,66 @@ PrefabInstance:
       propertyPath: respawnSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: splitBacks.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: splitBacks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1626320911}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: splitBacks.Array.data[1]
+      value: 
+      objectReference: {fileID: 973673215}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: splitBacks.Array.data[2]
+      value: 
+      objectReference: {fileID: 727148307}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: splitBacks.Array.data[3]
+      value: 
+      objectReference: {fileID: 1542141079}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunTimeTexts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunSplitTexts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunTimeTexts.Array.data[0]
+      value: 
+      objectReference: {fileID: 1528778044}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunTimeTexts.Array.data[1]
+      value: 
+      objectReference: {fileID: 911851570}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunTimeTexts.Array.data[2]
+      value: 
+      objectReference: {fileID: 2143201321}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunTimeTexts.Array.data[3]
+      value: 
+      objectReference: {fileID: 591546475}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunSplitTexts.Array.data[0]
+      value: 
+      objectReference: {fileID: 908941223}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunSplitTexts.Array.data[1]
+      value: 
+      objectReference: {fileID: 1806048149}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunSplitTexts.Array.data[2]
+      value: 
+      objectReference: {fileID: 765290525}
+    - target: {fileID: 4690317737761916021, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
+      propertyPath: speedrunSplitTexts.Array.data[3]
+      value: 
+      objectReference: {fileID: 870547083}
     - target: {fileID: 4690317737761916023, guid: faf961d4f391fd24387747b7c911ab12, type: 3}
       propertyPath: m_Name
       value: Checkpoint
@@ -10830,6 +11178,22 @@ PrefabInstance:
     - target: {fileID: 7759802965859967531, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805745487432025179, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
+      propertyPath: checkpointTimes.Array.data[0]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805745487432025179, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
+      propertyPath: checkpointTimes.Array.data[1]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805745487432025179, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
+      propertyPath: checkpointTimes.Array.data[2]
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805745487432025179, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
+      propertyPath: checkpointTimes.Array.data[3]
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8569373722407178829, guid: 18031f2f4fa5cae478cd96eadc113b00, type: 3}
       propertyPath: m_IsActive

@@ -12,6 +12,8 @@ public class Timer : MonoBehaviour
     private float minutes;
     private float seconds;
 
+    public float[] checkpointTimes = new float[4];
+
     // Start is called before the first frame update
     void Start()
     {

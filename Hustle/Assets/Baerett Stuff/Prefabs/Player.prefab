@@ -5586,7 +5586,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.02571, y: 0.3587597}
+  m_AnchoredPosition: {x: -0.045, y: 0.363}
   m_SizeDelta: {x: 7.79234, y: 0.9104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &5564824733676105782
@@ -5650,7 +5650,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '+/-         Time        '
+  m_text: '+/-        Time        '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12968,8 +12968,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15.037201, y: -5.4658422}
-  m_SizeDelta: {x: 1.4716, y: 1.4413}
+  m_AnchoredPosition: {x: -15.2674, y: -5.4658422}
+  m_SizeDelta: {x: 2.0582, y: 1.4413}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &2059614510386417122
 MeshRenderer:
@@ -14251,8 +14251,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17.24, y: 0.74}
-  m_SizeDelta: {x: 1.3479, y: 1.4413}
+  m_AnchoredPosition: {x: -17.2937, y: 0.74}
+  m_SizeDelta: {x: 1.9578, y: 1.4413}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &362711738530681801
 MeshRenderer:
@@ -14352,7 +14352,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -14652,8 +14652,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17.2448, y: -3.9191551}
-  m_SizeDelta: {x: 1.3479, y: 1.4413}
+  m_AnchoredPosition: {x: -17.300716, y: -3.9191551}
+  m_SizeDelta: {x: 1.9578, y: 1.4413}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &5909482544829304056
 MeshRenderer:
@@ -14753,7 +14753,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -17422,8 +17422,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15.04, y: -2.3626106}
-  m_SizeDelta: {x: 1.4716, y: 1.4413}
+  m_AnchoredPosition: {x: -15.2714, y: -2.3626106}
+  m_SizeDelta: {x: 2.0582, y: 1.4413}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &4150894247330294568
 MeshRenderer:
@@ -17743,6 +17743,11 @@ MonoBehaviour:
   timerIsRunning: 0
   timerText: {fileID: 7140782530726540154}
   time: 0
+  checkpointTimes:
+  - 0
+  - 0
+  - 0
+  - 0
 --- !u!1 &6789186752352685633
 GameObject:
   m_ObjectHideFlags: 0
@@ -22760,8 +22765,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17.25232, y: -0.8278488}
-  m_SizeDelta: {x: 1.3479, y: 1.4413}
+  m_AnchoredPosition: {x: -17.3116, y: -0.8278488}
+  m_SizeDelta: {x: 1.9578, y: 1.4413}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &6344779778719095586
 MeshRenderer:
@@ -22861,7 +22866,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -23661,8 +23666,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15.037201, y: -0.8229202}
-  m_SizeDelta: {x: 1.4716, y: 1.4413}
+  m_AnchoredPosition: {x: -15.2674, y: -0.8229202}
+  m_SizeDelta: {x: 2.0582, y: 1.4413}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &1261310245931694658
 MeshRenderer:
@@ -23862,8 +23867,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15.029, y: -3.9142265}
-  m_SizeDelta: {x: 1.4716, y: 1.4413}
+  m_AnchoredPosition: {x: -15.256, y: -3.9142265}
+  m_SizeDelta: {x: 2.0582, y: 1.4413}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &308234537780919336
 MeshRenderer:
@@ -24094,8 +24099,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17.254805, y: -2.3675392}
-  m_SizeDelta: {x: 1.3479, y: 1.4413}
+  m_AnchoredPosition: {x: -17.3152, y: -2.3675392}
+  m_SizeDelta: {x: 1.9578, y: 1.4413}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &3238568631243521401
 MeshRenderer:
@@ -24195,7 +24200,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -24328,8 +24333,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15.023801, y: 0.74492526}
-  m_SizeDelta: {x: 1.4716, y: 1.4413}
+  m_AnchoredPosition: {x: -15.2487, y: 0.74492526}
+  m_SizeDelta: {x: 2.0582, y: 1.4413}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &5333189196745588168
 MeshRenderer:
@@ -24580,8 +24585,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17.25232, y: -5.470771}
-  m_SizeDelta: {x: 1.3479, y: 1.4413}
+  m_AnchoredPosition: {x: -17.3116, y: -5.470771}
+  m_SizeDelta: {x: 1.9578, y: 1.4413}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &1350517578807625459
 MeshRenderer:
@@ -24681,7 +24686,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
