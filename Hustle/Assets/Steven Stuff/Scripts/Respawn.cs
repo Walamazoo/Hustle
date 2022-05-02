@@ -18,18 +18,18 @@ public class Respawn : MonoBehaviour
         _startPosition = player.gameObject.transform.position;
     }
 
-    void Update(){
-        if(Input.GetKeyUp(KeyCode.R)){
-            Reset();
-        }
-    }
-
     void UpdateSpeedState(int direction){
         //Debug.Log("Update speed state");
         if(stateHolder.speedState !>= 3 || stateHolder.speedState !<= -3){
             stateHolder.speedState += direction;
         }
         //Debug.Log(_speedState);
+    }
+
+    void Update(){
+        if(Input.GetKeyUp(KeyCode.R)){
+            Reset();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other){
